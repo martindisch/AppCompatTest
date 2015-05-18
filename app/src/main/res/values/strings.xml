@@ -7,4 +7,15 @@
     <string name="hello_world">Hello world!</string>
 
     <string name="action_settings">Settings</string>
+    <string name="sample">The quick brown fox jumped over the lazy dog</string>
+    <string name="show_dialog">Show dialog</string>
+    <string name="rb1">Option 1</string>
+    <string name="rb2">Option 2</string>
+    <string name="checkme">Check me</string>
+    <string-array name="countries">
+        <item>Norway</item>
+        <item>Finland</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+    </string-array>
 </resources>
