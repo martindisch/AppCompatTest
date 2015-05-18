@@ -12,6 +12,9 @@
     <string name="rb1">Option 1</string>
     <string name="rb2">Option 2</string>
     <string name="checkme">Check me</string>
+    <string name="title">Choice</string>
+    <string name="choice">Choose wisely</string>
+    <string name="positive">Yes</string>
     <string-array name="countries">
         <item>Norway</item>
         <item>Finland</item>

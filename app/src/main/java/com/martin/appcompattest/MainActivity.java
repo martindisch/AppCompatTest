@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -184,6 +185,18 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             Button clicker = (Button) rootView.findViewById(R.id.bDialog);
             AutoCompleteTextView actv = (AutoCompleteTextView) rootView.findViewById(R.id.actvCountries);
+            final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setTitle(R.string.title);
+            CharSequence cs[] = {"One", "Two", "Three"};
+            builder.setSingleChoiceItems(cs, 2, null);
+            //builder.setMessage(getString(R.string.choice));
+            builder.setPositiveButton(R.string.positive, null);
+            clicker.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    builder.show();
+                }
+            });
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.countries));
             actv.setAdapter(adapter);
             return rootView;
